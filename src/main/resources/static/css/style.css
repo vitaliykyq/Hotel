@@ -2,8 +2,8 @@ body{
     width: 100%;
     height: 100%;
     padding: 1%;
-    background: url("https://kartinkinaden.ru/uploads/posts/2020-09/1600222760_26-p-nezhnii-fon-dlya-saita-34.jpg");
     background-size: 100%;
+    background: url("../image/backgroundPage.jpeg") fixed;
 }
 
 table.control{
@@ -34,7 +34,7 @@ table.control .btnDrop{
 
 table.control .dropItem{
     background: #f090ff;
-    border-radius: 30px 0px 30px 0px;
+    border-radius: 30px 0 30px 0;
     padding: 20px;
     margin-top: 20px;
 }
