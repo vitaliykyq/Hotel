@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Person</title>
+        <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>UPDATE PERSON</h1>
+        </div>
+        <form action="#" th:action="@{/ui/person/update}" th:object="${person}"
+              method="POST">
+            <table>
+                <tr>
+                    <td><label for="num1">Id</label></td>
+                    <td><input id="num1" type="number" readonly th:field="*{id}"/></td>
+                </tr>
+            <tr>
+                <td><label for="num2">Name</label></td>
+                <td><input id="num2" th:field="*{name}"  required></td>
+            </tr>
+            <tr>
+                <td><label for="num3">Surname</label></td>
+                <td><input id="num3" th:field="*{surname}"  required></td>
+            </tr>
+            <tr>
+                <td><label for="num4">Age</label></td>
+                <td><input id="num4" type="number" th:field="*{age}"  required></td>
+            </tr>
+            </table>
+            <br>
+
+            <button type="submit">DONE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/person/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>

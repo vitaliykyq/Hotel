@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Feedback</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>ADD FEEDBACK</h1>
+        </div>
+        <form action="#" th:action="@{/ui/feedback/add}" th:object="${feedback}"
+              method="POST">
+
+            <table>
+                <tr>
+                    <td><label for="num1">Response</label></td>
+                    <td><input id="num1" th:field="*{response}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Stars</label></td>
+                    <td><input id="num2" th:field="*{stars}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num3">Person</label></td>
+                    <td>
+                        <div id="num3">
+                            <select id="id" th:field="*{person.id}">
+                                <option th:each="personIdList: ${personIdList}"
+                                        th:value="${personIdList.id}" th:text="${personIdList.name}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">SAVE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/feedback/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>

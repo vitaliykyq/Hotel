@@ -1,0 +1,189 @@
+body{
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    background: url("https://kartinkinaden.ru/uploads/posts/2020-09/1600222760_26-p-nezhnii-fon-dlya-saita-34.jpg");
+    background-size: 100%;
+}
+
+table.control{
+    border: 1px solid #ac8fb5;
+    border-collapse: collapse;
+    width: 96%;
+    background: white;
+}
+
+table.control .title{
+    background: #e8b3f7;
+}
+
+table.control th, table.control td{
+    border: 1px solid #ac8fb5;
+    padding: 20px;
+}
+
+table.control .btnDrop{
+    border:none;
+    padding: 10px 20px 10px 20px;
+    background: #f090ff;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px 0 30px 0;
+}
+
+table.control .dropItem{
+    background: #f090ff;
+    border-radius: 30px 0px 30px 0px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+table.control .dropItem li{
+    margin: 10px;
+    list-style-type: none;
+}
+
+table.control .dropItem a:first-child{
+    float: left;
+    margin-right: 40px;
+}
+
+.ButtonAdd{
+    border: 1px solid #d885ef;
+    background: #f090ff;
+    padding: 20px;
+    width: 200px;
+    border-radius: 40px 10px 40px 5px;
+    box-shadow: 10px 5px 5px #b793bd;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 20px;
+    font-family: Monaco, serif;
+    color:#8f5598;
+}
+
+.ButtonAdd:hover{
+    color:white;
+    background: #e58af3;
+    box-shadow: none;
+    transition: .3s;
+}
+
+table.control .invisible{
+    display: none;
+}
+
+table.control .dropItem table,
+table.control .dropItem td,
+table.control .dropItem tr{
+    border: none;
+    border-bottom: 2px solid pink;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.control .dropItem td:first-child{
+    font-weight: bold;
+}
+
+table.control .ButtonOpen{
+    border:none;
+    padding: 10px;
+    font-family: Monaco, Sana, fantasy;
+    background: #f9daff;
+    cursor: pointer;
+    margin-top:10px;
+}
+
+table.control .buttonControl{
+    text-align: center;
+}
+
+table.control .buttonControl a{
+    text-decoration: none;
+}
+
+table.control .buttonControl .ButtonDelete,
+table.control .buttonControl .ButtonEdit{
+    font-size: 20px;
+    cursor:pointer;
+    border: 2px solid #b687c5;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    background: #f3d1fd;
+}
+
+table.control .buttonControl .ButtonDelete{
+    color: #7c3b9e;
+    transition: .3s;
+}
+
+table.control .buttonControl .ButtonDelete:hover{
+    color: #d900ff;
+    transition: .3s;
+    border: 2px solid #f3d1fd;
+}
+
+table.control .buttonControl .ButtonEdit:hover{
+    color: #12b9b2;
+    transition: .3s;
+    border: 2px solid #f3d1fd;
+}
+
+table.control .buttonControl .ButtonEdit{
+    color: #0f9c0f;
+    font-weight: bold;
+    transition: .3s;
+}
+
+
+.elementPages{
+    text-align: center;
+}
+
+.elementPages table,
+.elementPages tr,
+.elementPages td{
+    margin:auto;
+}
+
+.elementPages td{
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+.elementPages td:first-child{
+    font-weight: bold;
+    float: left;
+}
+
+.elementPages td:last-child{
+    text-align: left;
+}
+
+.elementPages input{
+    padding: 3px;
+}
+
+.elementPages button[type="submit"]{
+    padding: 10px 15px 10px 15px;
+    font-size: 20px;
+    font-family: "Bodoni 72 Smallcaps", monospace;
+    cursor: pointer;
+    background: #eac9f800;
+    border-radius: 10px;
+    transition: .2s;
+    color:#ea93ea;
+}
+
+.elementPages button[type="submit"]:hover{
+    border-radius: 15px 0 15px 0;
+    transition: .2s;
+    color:#ad5cad;
+    background: #f9ecff;
+}

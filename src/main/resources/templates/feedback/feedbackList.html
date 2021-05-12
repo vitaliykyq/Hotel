@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback List</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <table class="control">
+            <thead>
+                <tr class="title">
+                    <th>Id</th>
+                    <th>Response</th>
+                    <th>Stars</th>
+                    <th>Person</th>
+
+                    <th>CreatedAt</th>
+                    <th>ModifiedAt</th>
+                    <th class="options" colspan="2">OPTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="feedback: ${feedbackList}">
+                <td th:text="${feedback.id}" style="width: 10%;"></td>
+                <td th:text="${feedback.response}" style="width: 30%;"></td>
+                <td th:text="${feedback.stars}" style="width: 10%;"></td>
+                <td style="width: 10%; text-align: center;">
+                    <button class="btnDrop" th:text="${feedback.person.name}" th:data-id="${feedback.id}"
+                            th:data-status="off" onclick="kl(this)">ID</button>
+                        <div class="invisible dropItem" th:data-id-drop="${feedback.id}">
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td th:text="${feedback.person.name}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Surname</td>
+                                    <td th:text="${feedback.person.surname}"></td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td th:text="${feedback.person.age}"></td>
+                                </tr>
+                                <tr>
+                                    <td>CreatedAt</td>
+                                    <td th:text="${feedback.person.created_at}"></td>
+                                </tr>
+                                <tr>
+                                    <td>ModifiedAt</td>
+                                    <td th:text="${feedback.person.modified_at}"></td>
+                                </tr>
+                            </table>
+                            <br>
+                            <a th:href="@{/ui/person/get/all}">
+                                <button class="ButtonOpen">Open</button>
+                            </a>
+                        </div>
+                </td>
+                <td th:text="${feedback.created_at}" style="width: 15%;"></td>
+                <td th:text="${feedback.modified_at}" style="width: 15%;"></td>
+                <td style="width: 10%;" class="buttonControl">
+                    <a th:href="@{/ui/feedback/delete/{id}(id=${feedback.id})}">
+                        <button class="ButtonDelete">&#10008;</button>
+                    </a>
+                    <a th:href="@{/ui/feedback/showUpdateForm/{id}(id=${feedback.id})}">
+                        <button  class="ButtonEdit">&#9998;</button>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <a th:href = "@{/ui/feedback/showNewForm}">
+            <button class="ButtonAdd">Add</button>
+        </a>
+    </div>
+    <script th:inline="javascript">
+        let listElem = document.querySelectorAll(".dropItem");
+        function kl(obj) {
+            listElem.forEach(elem => { elem.style.display = "none";});
+
+            if(obj.getAttribute("data-status") === "on") {
+                document.querySelectorAll(".btnDrop").
+                forEach(elem => { elem.setAttribute("data-status", "off"); })
+                return;
+            }
+
+            listElem.forEach(elem => {
+                if(elem.getAttribute("data-id-drop") === obj.getAttribute("data-id")) {
+                    elem.style.display = "grid";
+                    elem.style.position = "absolute";
+                    elem.style.gridTemplateColumns = "auto auto";
+                    obj.setAttribute("data-status", "on");
+                }else{
+                    document.querySelectorAll(".btnDrop").
+                    forEach(elem => { if(elem != obj) elem.setAttribute("data-status", "off"); })
+                }
+            })
+        }
+    </script>
+</body>
+</html>
