@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -64,7 +65,7 @@ public class FeedbackDAOImpl implements IFeedbackDAO {
         String id = String.valueOf(this.getAll().stream()
                 .mapToInt(el->Integer.parseInt(el.getId()))
                 .max().orElse(0)+1);
-        feedback.setCreated_at(LocalDateTime.now());
+        feedback.setCreated_at(new Date());
         feedback.setId(id);
         this.getAll().add(feedback);
         return feedback;
@@ -76,7 +77,7 @@ public class FeedbackDAOImpl implements IFeedbackDAO {
         updatedFeedback.setResponse(feedback.getResponse());
         updatedFeedback.setStars(feedback.getStars());
         updatedFeedback.setPerson(feedback.getPerson());
-        updatedFeedback.setModified_at(LocalDateTime.now());
+        updatedFeedback.setModified_at(new Date());
 
         return updatedFeedback;
 

@@ -32,8 +32,8 @@ public class FeedbackUIController {
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
-        List<Feedback> feedbackList = feedbackService.getAll();
-        model.addAttribute("feedbackList", feedbackList);
+        List<Feedback> feedback = feedbackService.getAll();
+        model.addAttribute("feedbackList", feedback);
 
         return "feedback/feedbackList";
     }
@@ -69,16 +69,9 @@ public class FeedbackUIController {
     @PostMapping("/add")
     public String add(Model model, @ModelAttribute("employee") @RequestBody Feedback feedback) {
 
-        String response = feedback.getResponse();
-        int stars = feedback.getStars();
-        feedback.setPerson(personService.getAll().get(Integer.parseInt(feedback.getPerson().getId()) - 1));
-        /*List<Plane> planes = planeService.getAll();*/
 
-        if (response != null && response.length() > 0 && stars > 0) {
             model.addAttribute("feedback", feedbackService.create(feedback));
             return "redirect:/ui/feedback/get/all";
-        }
-        return "redirect:/ui/feedback/showNewForm";
     }
 
     @RequestMapping("/delete/{id}")

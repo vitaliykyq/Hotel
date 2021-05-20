@@ -11,40 +11,45 @@ package edu.coursework.hotel.service.feedback.impls;
 import edu.coursework.hotel.dao.feedback.impls.FeedbackDAOImpl;
 import edu.coursework.hotel.data.FakeData;
 import edu.coursework.hotel.model.Feedback;
+import edu.coursework.hotel.repository.ClientRepository;
+import edu.coursework.hotel.repository.FeedbackRepository;
 import edu.coursework.hotel.service.feedback.interfaces.IFeedbackService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
 public class FeedbackServiceImpl implements IFeedbackService {
 
     @Autowired
-    FakeData fakeData;
-
-    @Autowired
-    FeedbackDAOImpl dao;
+    FeedbackRepository repository;
 
     @Override
     public Feedback getById(String id) {
-        return dao.getById(id);
+        return repository.findById(id).orElse(null);
     }
 
     @Override
     public Feedback create(Feedback feedback) {
-        return dao.create(feedback);
-    }
+
+        feedback.setCreated_at(new Date());
+        return repository.save(feedback);    }
 
     @Override
     public Feedback update(Feedback feedback) {
-        return dao.update(feedback);
+
+        feedback.setModified_at(new Date());
+        return repository.save(feedback);
     }
 
     @Override
     public Feedback delete(String id) {
-        return dao.delete(id);
+
+        repository.deleteById(id);
+        return null;
     }
 
     @Override
@@ -54,6 +59,6 @@ public class FeedbackServiceImpl implements IFeedbackService {
 
     @Override
     public List<Feedback> getAll() {
-        return dao.getAll();
+        return repository.findAll();
     }
 }

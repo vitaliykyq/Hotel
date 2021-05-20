@@ -16,6 +16,7 @@ public class Booking {
 
     private String id;
 
+
     private ArrayList<Room> rooms;
     private ArrayList<Entertainment> entertainments;
     private ArrayList<Services> services;
@@ -24,7 +25,7 @@ public class Booking {
     private ArrayList<objDebt> debts;
     private Person person;
 
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+    private Date created_at;
+    private Date modified_at;
     private String description;
 }

@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import edu.coursework.hotel.model.object.objBooking;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -12,8 +14,9 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Document(collection = "organization")
 public class Organization {
-
+    @Id
     private String id;
 
     private String type;
@@ -22,7 +25,7 @@ public class Organization {
     private ArrayList<Person> persons;
     private ArrayList<objBooking> objBooking;
 
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+    private Date created_at;
+    private Date modified_at;
     private String description;
 }
