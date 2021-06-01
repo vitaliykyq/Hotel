@@ -36,19 +36,19 @@ public class PersonUIController {
     @GetMapping("/showUpdateForm/{id}")
     public String showUpdateForm(@PathVariable (value="id") String id, Model model){
         Person person = service.getById(id);
-        model.addAttribute("person",person);
+        model.addAttribute("personList",person);
         return "person/updatePerson";
     }
 
     @GetMapping("/showNewForm")
     public String showNewForm(Model model) {
         Person person = new Person();
-        model.addAttribute("person", person);
+        model.addAttribute("personList", person);
         return "person/newPerson";
     }
 
     @PostMapping("/add")
-    public String add(Model model, @ModelAttribute("employee") @RequestBody Person person) {
+    public String add(Model model, @ModelAttribute("personList") @RequestBody Person person) {
         String name = person.getName();
         String surname = person.getSurname();
         int age = person.getAge();
@@ -56,14 +56,14 @@ public class PersonUIController {
 
         if (name != null && name.length() > 0 && surname != null && surname.length() > 0
                 && age > 0) {
-            model.addAttribute("person", service.create(person));
+            model.addAttribute("personList", service.create(person));
             return "redirect:/ui/person/get/all";
         }
         return "redirect:/ui/person/showNewForm";
     }
 
     @PostMapping("/update")
-    public String update(Model model, @ModelAttribute("employee") @RequestBody Person person) {
+    public String update(Model model, @ModelAttribute("personList") @RequestBody Person person) {
 
         service.update(person);
         return "redirect:/ui/person/get/all";

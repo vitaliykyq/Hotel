@@ -25,10 +25,4 @@ public class Feedback {
     private Date modified_at;
     private String description;
 
-    public Feedback(String id, String response, int stars, Person person) {
-        this.id = id;
-        this.response = response;
-        this.stars = stars;
-        this.person = person;
-    }
 }

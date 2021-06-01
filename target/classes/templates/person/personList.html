@@ -20,18 +20,18 @@
                 </tr>
             </thead>
             <tbody>
-            <tr th:each="person: ${personList}">
-                <td th:text="${person.id}" style="width: 10%;"></td>
-                <td th:text="${person.name}" style="width: 15%;"></td>
-                <td th:text="${person.surname}" style="width: 15%;"></td>
-                <td th:text="${person.age}" style="width: 10%;"></td>
-                <td th:text="${person.created_at}" style="width: 15%;"></td>
-                <td th:text="${person.modified_at}" style="width: 15%;"></td>
+            <tr th:each="personList: ${personList}">
+                <td th:text="${personList.id}" style="width: 10%;"></td>
+                <td th:text="${personList.name}" style="width: 15%;"></td>
+                <td th:text="${personList.surname}" style="width: 15%;"></td>
+                <td th:text="${personList.age}" style="width: 10%;"></td>
+                <td th:text="${personList.created_at}" style="width: 15%;"></td>
+                <td th:text="${personList.modified_at}" style="width: 15%;"></td>
                 <td style="width: 10%;" class="buttonControl">
-                    <a th:href="@{/ui/person/delete/{id}(id=${person.id})}">
+                    <a th:href="@{/ui/person/delete/{id}(id=${personList.id})}">
                         <button class="ButtonDelete">&#10008;</button>
                     </a>
-                    <a th:href="@{/ui/person/showUpdateForm/{id}(id=${person.id})}">
+                    <a th:href="@{/ui/person/showUpdateForm/{id}(id=${personList.id})}">
                         <button  class="ButtonEdit">&#9998;</button>
                     </a>
                 </td>

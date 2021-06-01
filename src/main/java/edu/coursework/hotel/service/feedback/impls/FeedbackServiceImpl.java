@@ -8,8 +8,6 @@ package edu.coursework.hotel.service.feedback.impls;
     @since:    14.04.2021
 */
 
-import edu.coursework.hotel.dao.feedback.impls.FeedbackDAOImpl;
-import edu.coursework.hotel.data.FakeData;
 import edu.coursework.hotel.model.Feedback;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.FeedbackRepository;

@@ -2,12 +2,12 @@ package edu.coursework.hotel.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import edu.coursework.hotel.model.object.objBooking;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Data
@@ -19,7 +19,7 @@ public class Client {
     private String id;
 
     private Person person;
-    private objBooking booking;
+    private ArrayList<Booking> booking;
 
     private Date created_at;
     private Date modified_at;

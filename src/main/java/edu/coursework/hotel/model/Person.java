@@ -24,12 +24,4 @@ public class Person {
     private Date created_at;
     private Date modified_at;
     private String description;
-
-    public Person(String id, String name, String surname, int age) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.created_at = new Date();
-    }
 }

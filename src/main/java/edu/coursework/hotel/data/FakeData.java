@@ -1,12 +1,15 @@
+/*
 package edu.coursework.hotel.data;
 
+*/
 /*
     @author:    Natalie
     @project:    Hotel
     @class:    FakeData
     @version:    1.0.0
     @since:    14.04.2021
-*/
+*//*
+
 
 import edu.coursework.hotel.model.Feedback;
 import edu.coursework.hotel.model.Person;
@@ -62,3 +65,4 @@ public class FakeData {
         this.feedbackList = feedbackList;
     }
 }
+*/

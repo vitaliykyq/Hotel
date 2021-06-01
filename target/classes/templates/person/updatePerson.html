@@ -10,12 +10,12 @@
         <div>
             <h1>UPDATE PERSON</h1>
         </div>
-        <form action="#" th:action="@{/ui/person/update}" th:object="${person}"
+        <form action="#" th:action="@{/ui/person/update}" th:object="${personList}"
               method="POST">
             <table>
                 <tr>
                     <td><label for="num1">Id</label></td>
-                    <td><input id="num1" type="number" readonly th:field="*{id}"/></td>
+                    <td><input id="num1" type="text" readonly th:field="*{id}"/></td>
                 </tr>
             <tr>
                 <td><label for="num2">Name</label></td>

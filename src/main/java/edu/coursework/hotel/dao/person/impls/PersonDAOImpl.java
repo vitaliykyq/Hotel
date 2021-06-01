@@ -1,12 +1,15 @@
+/*
 package edu.coursework.hotel.dao.person.impls;
 
+*/
 /*
     @author:    Natalie
     @project:    Hotel
     @class:    ServicesDAOImpl
     @version:    1.0.0 
     @since:    14.04.2021     
-*/
+*//*
+
 
 import edu.coursework.hotel.dao.person.interfaces.IPersonDAO;
 import edu.coursework.hotel.data.FakeData;
@@ -24,7 +27,8 @@ public class PersonDAOImpl implements IPersonDAO {
     @Autowired
     FakeData fakeData;
 
-    /*@Override
+    */
+/*@Override
     public Administration getById(String id) {
         return null;
     }
@@ -52,7 +56,8 @@ public class PersonDAOImpl implements IPersonDAO {
     @Override
     public List<Administration> getAll() {
         return fakeData.getAdministrations();
-    }*/
+    }*//*
+
 
     @Override
     public Person getById(String id) {
@@ -100,3 +105,4 @@ public class PersonDAOImpl implements IPersonDAO {
         return fakeData.getPersonList();
     }
 }
+*/

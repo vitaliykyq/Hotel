@@ -2,7 +2,6 @@ package edu.coursework.hotel.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import edu.coursework.hotel.model.object.objBooking;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -23,7 +22,7 @@ public class Organization {
     private Date start;
     private Date finish;
     private ArrayList<Person> persons;
-    private ArrayList<objBooking> objBooking;
+    private ArrayList<Booking> Booking;
 
     private Date created_at;
     private Date modified_at;

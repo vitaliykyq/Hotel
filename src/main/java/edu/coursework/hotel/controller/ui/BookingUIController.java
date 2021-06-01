@@ -8,8 +8,10 @@ package edu.coursework.hotel.controller.ui;
     @since:    26.04.2021     
 */
 
+import edu.coursework.hotel.model.Booking;
 import edu.coursework.hotel.model.Feedback;
 import edu.coursework.hotel.model.Person;
+import edu.coursework.hotel.service.booking.impls.BookingServiceImpl;
 import edu.coursework.hotel.service.feedback.impls.FeedbackServiceImpl;
 import edu.coursework.hotel.service.person.impls.PersonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +21,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/ui/feedback")
+@RequestMapping("/ui/bookings")
 @Controller
-public class FeedbackUIController {
+public class BookingUIController {
 
     @Autowired
-    FeedbackServiceImpl feedbackService;
+    BookingServiceImpl service;
 
     @Autowired
     PersonServiceImpl personService;
@@ -32,50 +34,50 @@ public class FeedbackUIController {
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
-        List<Feedback> feedback = feedbackService.getAll();
-        model.addAttribute("feedbackList", feedback);
+        List<Booking> bookings = service.getAll();
+        model.addAttribute("booking", bookings);
 
-        return "feedback/feedbackList";
+        return "booking/bookingList";
     }
 
     @GetMapping("/showUpdateForm/{id}")
     public String showUpdateForm(@PathVariable (value="id") String id, Model model){
-        Feedback feedback = feedbackService.getById(id);
-        model.addAttribute("feedback", feedback);
+        Booking booking = service.getById(id);
+        model.addAttribute("booking", booking);
 
         List<Person> personIdList = personService.getAll();
         model.addAttribute("personIdList", personIdList);
-        return "feedback/updateFeedback";
+        return "booking/updateBooking";
     }
 
     @PostMapping("/update")
-    public String update(Model model, @ModelAttribute("employee") @RequestBody Feedback feedback) {
+    public String update(Model model, @ModelAttribute("booking") @RequestBody  Booking booking ) {
 
-        feedbackService.update(feedback);
-        return "redirect:/ui/feedback/get/all";
+        service.update(booking);
+        return "redirect:/ui/bookings/get/all";
     }
 
     @GetMapping("/showNewForm")
     public String showNewForm(Model model) {
-        Feedback feedback = new Feedback();
-        model.addAttribute("feedback", feedback);
+        Booking booking  = new Booking();
+        model.addAttribute("feedback", booking);
 
         List<Person> personIdList = personService.getAll();
         model.addAttribute("personIdList", personIdList);
-        return "feedback/newFeedback";
+        return "booking/newBooking";
     }
 
     @PostMapping("/add")
-    public String add(Model model, @ModelAttribute("employee") @RequestBody Feedback feedback) {
+    public String add(Model model, @ModelAttribute("feedback") @RequestBody Booking booking) {
 
 
-            model.addAttribute("feedback", feedbackService.create(feedback));
-            return "redirect:/ui/feedback/get/all";
+            model.addAttribute("feedback", service.create(booking));
+            return "redirect:/ui/bookings/get/all";
     }
 
     @RequestMapping("/delete/{id}")
     public String delete(Model model, @PathVariable String id){
-        feedbackService.delete(id);
-        return "redirect:/ui/feedback/get/all";
+        service.delete(id);
+        return "redirect:/ui/bookings/get/all";
     }
 }

@@ -8,8 +8,6 @@ package edu.coursework.hotel.service.person.impls;
     @since:    14.04.2021
 */
 
-import edu.coursework.hotel.dao.person.impls.PersonDAOImpl;
-import edu.coursework.hotel.data.FakeData;
 import edu.coursework.hotel.model.Person;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.PersonRepository;
@@ -38,7 +36,8 @@ public class PersonServiceImpl implements IPersonService {
     }
 
     @Override
-    public Person update(Person person) {   person.setModified_at(new Date());
+    public Person update(Person person) {
+        person.setModified_at(new Date());
         return repository.save(person);
     }
 

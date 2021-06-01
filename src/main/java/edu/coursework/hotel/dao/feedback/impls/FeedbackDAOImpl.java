@@ -1,12 +1,12 @@
-package edu.coursework.hotel.dao.feedback.impls;
+/*package edu.coursework.hotel.dao.feedback.impls;
 
-/*
+*//*
     @author:    Natalie
     @project:    Hotel
     @class:    ServicesDAOImpl
     @version:    1.0.0 
     @since:    14.04.2021     
-*/
+*//*
 
 import edu.coursework.hotel.dao.feedback.interfaces.IFeedbackDAO;
 import edu.coursework.hotel.data.FakeData;
@@ -24,7 +24,7 @@ public class FeedbackDAOImpl implements IFeedbackDAO {
     @Autowired
     FakeData fakeData;
 
-    /*@Override
+    *//*@Override
     public Administration getById(String id) {
         return null;
     }
@@ -52,7 +52,7 @@ public class FeedbackDAOImpl implements IFeedbackDAO {
     @Override
     public List<Administration> getAll() {
         return fakeData.getAdministrations();
-    }*/
+    }*//*
 
     @Override
     public Feedback getById(String id) {
@@ -99,4 +99,4 @@ public class FeedbackDAOImpl implements IFeedbackDAO {
     public List<Feedback> getAll() {
         return fakeData.getFeedbackList();
     }
-}
+}*/
