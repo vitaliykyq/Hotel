@@ -50,4 +50,8 @@ public class BookingRestController {
         return service.update(booking);
     }
 
+    @GetMapping("/get/roomWithDateOfEviction/{eviction}")
+    public Object getRoomWithDateOfEviction(@PathVariable("eviction") String eviction){
+        return service.getRoomWithDateOfEviction(eviction) ;
+    }
 }

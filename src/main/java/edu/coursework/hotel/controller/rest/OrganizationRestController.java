@@ -50,4 +50,13 @@ public class OrganizationRestController {
         return service.update(organization);
     }
 
+    @GetMapping("/get/numOfOrganizations")
+    public Object getNumOfOrganizations(){
+        return service.getNumOfOrganizations() ;
+    }
+
+    @GetMapping("/get/allByAmountGreaterThanEqual/{amount}")
+    public List<Organization> getAllByAmountGreaterThanEqual(@PathVariable("amount") int amount){
+        return service.getAllByAmountGreaterThanEqual(amount) ;
+    }
 }

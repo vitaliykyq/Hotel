@@ -18,11 +18,11 @@ public class Booking {
 @Id
     private String id;
     private Client client;
-    private ArrayList<Room> rooms;
+    private Room room;
     private ArrayList<Entertainment> entertainments;
     private ArrayList<Services> services;
-    private Date settlement;
-    private Date eviction;
+    private String settlement;
+    private String eviction;
     private double price;
 
 

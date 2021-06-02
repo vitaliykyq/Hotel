@@ -17,7 +17,7 @@ import java.util.Date;
 public class Room {
 @Id
     private String id;
-
+    private int number;
     private int capacity;
     private int price;
     private boolean isFree;

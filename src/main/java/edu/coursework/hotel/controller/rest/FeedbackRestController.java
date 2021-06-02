@@ -50,4 +50,8 @@ public class FeedbackRestController {
         return service.update(feedback);
     }
 
+    @GetMapping("/get/badFeedbacks")
+    public Object getBadFeedbacks(){
+        return service.getBadFeedbacks() ;
+    }
 }

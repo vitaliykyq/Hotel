@@ -5,12 +5,19 @@ import edu.coursework.hotel.model.Person;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.PersonRepository;
 import edu.coursework.hotel.service.client.interfaces.IClientService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+
+import static org.springframework.data.mongodb.core.aggregation.Fields.fields;
+
 @Service
+@RequiredArgsConstructor
 public class ClientServiceImpl implements IClientService {
 
     @Autowired
@@ -52,4 +59,6 @@ public class ClientServiceImpl implements IClientService {
     public List<Client> getAll() {
         return repository.findAll();
     }
+
+
 }

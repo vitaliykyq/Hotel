@@ -8,18 +8,27 @@ import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.FeedbackRepository;
 import edu.coursework.hotel.repository.PersonRepository;
 import edu.coursework.hotel.service.booking.interfaces.IBookingService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+
+import static org.springframework.data.mongodb.core.aggregation.Fields.fields;
+
 @Service
+@RequiredArgsConstructor
 public class BookingServiceImpl implements IBookingService {
 
     @Autowired
     BookingRepository repository;
     @Autowired
     ClientRepository repositoryC;
+    private final MongoTemplate mongoTemplate;
     @Override
     public Booking getById(String id) {
         return repository.findById(id).orElse(null);
@@ -53,5 +62,12 @@ public class BookingServiceImpl implements IBookingService {
     @Override
     public List<Booking> getAll() {
         return repository.findAll();
+    }
+
+    public Object getRoomWithDateOfEviction(String eviction) {
+
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.match(Criteria.where("eviction").is(eviction).and("room.isFree").is(false)));
+        return mongoTemplate.aggregate(aggregation, "booking", Object.class).getMappedResults();
     }
 }

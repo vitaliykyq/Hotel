@@ -18,9 +18,10 @@ public class Organization {
     @Id
     private String id;
 
-    private String type;
+    private String name;
     private Date start;
     private Date finish;
+    private int amount;
     private ArrayList<Person> persons;
     private ArrayList<Booking> Booking;
 

@@ -12,6 +12,7 @@ import edu.coursework.hotel.model.Client;
 import edu.coursework.hotel.model.Entertainment;
 import edu.coursework.hotel.service.client.impls.ClientServiceImpl;
 import edu.coursework.hotel.service.entertainment.impls.EntertainmentServiceImpl;
+import io.swagger.v3.core.util.Json;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,5 +50,7 @@ public class ClientRestController {
     public  Client update(@RequestBody  Client client){
         return service.update(client);
     }
+
+
 
 }
