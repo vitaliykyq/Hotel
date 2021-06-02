@@ -38,7 +38,11 @@ public class PersonServiceImpl implements IPersonService {
     @Override
     public Person update(Person person) {
         person.setModified_at(new Date());
-        return repository.save(person);
+        person.setCreated_at(repository.findById(person.getId())
+                .orElse(null)
+                .getCreated_at());
+        repository.save(person);
+        return person;
     }
 
     @Override

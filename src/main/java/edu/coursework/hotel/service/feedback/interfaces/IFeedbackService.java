@@ -18,6 +18,5 @@ public interface IFeedbackService {
     Feedback create(Feedback feedback);
     Feedback update(Feedback feedback);
     Feedback delete(String id);
-    Feedback save(Feedback feedback);
     List<Feedback> getAll();
 }

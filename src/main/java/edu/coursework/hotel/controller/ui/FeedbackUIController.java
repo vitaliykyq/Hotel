@@ -68,7 +68,7 @@ public class FeedbackUIController {
     @PostMapping("/add")
     public String add(Model model, @ModelAttribute("employee") @RequestBody Feedback feedback) {
 
-
+            feedback.setPerson(personService.getById(feedback.getPerson().getId()));
             model.addAttribute("feedback", feedbackService.create(feedback));
             return "redirect:/ui/feedback/get/all";
     }

@@ -38,20 +38,18 @@ public class FeedbackServiceImpl implements IFeedbackService {
 
     @Override
     public Feedback update(Feedback feedback) {
-
         feedback.setModified_at(new Date());
-        return repository.save(feedback);
+        feedback.setCreated_at(repository.findById(feedback.getId())
+                .orElse(null)
+                .getCreated_at());
+        repository.save(feedback);
+        return feedback;
     }
 
     @Override
     public Feedback delete(String id) {
 
         repository.deleteById(id);
-        return null;
-    }
-
-    @Override
-    public Feedback save(Feedback feedback) {
         return null;
     }
 
