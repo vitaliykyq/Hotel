@@ -9,8 +9,10 @@ package edu.coursework.hotel.service.feedback.impls;
 */
 
 import edu.coursework.hotel.model.Feedback;
+import edu.coursework.hotel.model.Person;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.FeedbackRepository;
+import edu.coursework.hotel.repository.PersonRepository;
 import edu.coursework.hotel.service.feedback.interfaces.IFeedbackService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,8 @@ public class FeedbackServiceImpl implements IFeedbackService {
 
     @Autowired
     FeedbackRepository repository;
+    @Autowired
+    PersonRepository repositoryP;
 
     @Override
     public Feedback getById(String id) {
@@ -39,6 +43,9 @@ public class FeedbackServiceImpl implements IFeedbackService {
     @Override
     public Feedback update(Feedback feedback) {
         feedback.setModified_at(new Date());
+        String personID = feedback.getPerson().getId();
+        Person person = repositoryP.findById(personID).orElse(null);
+        feedback.setPerson(person);
         feedback.setCreated_at(repository.findById(feedback.getId())
                 .orElse(null)
                 .getCreated_at());
