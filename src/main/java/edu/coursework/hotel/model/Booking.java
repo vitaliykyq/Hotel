@@ -1,5 +1,13 @@
 package edu.coursework.hotel.model;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    Booking
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
 package edu.coursework.hotel.controller.ui;
 
 /*
-    @author:    Julia
+    @author:    Natalie
     @project:    Hotel
     @class:    PersonUIController
     @version:    1.0.0 
@@ -48,7 +48,7 @@ public class PersonUIController {
     }
 
     @PostMapping("/add")
-    public String add(Model model, @ModelAttribute("personList") @RequestBody Person person) {
+    public String add(Model model, @ModelAttribute("person") @RequestBody Person person) {
         String name = person.getName();
         String surname = person.getSurname();
         int age = person.getAge();
@@ -63,7 +63,7 @@ public class PersonUIController {
     }
 
     @PostMapping("/update")
-    public String update(Model model, @ModelAttribute("personList") @RequestBody Person person) {
+    public String update(Model model, @ModelAttribute("person") @RequestBody Person person) {
 
         service.update(person);
         return "redirect:/ui/person/get/all";

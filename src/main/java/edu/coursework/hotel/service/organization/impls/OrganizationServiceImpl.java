@@ -1,5 +1,13 @@
 package edu.coursework.hotel.service.organization.impls;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    OrganizationServiceImpl
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import edu.coursework.hotel.model.Organization;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.OrganizationRepository;

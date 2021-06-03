@@ -1,5 +1,13 @@
 package edu.coursework.hotel.service.corps.impls;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    CorpsServiceImpl
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import edu.coursework.hotel.model.Corps;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.CorpsRepository;
@@ -9,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+
 @Service
 public class CorpsServiceImpl implements ICorpsService {
 

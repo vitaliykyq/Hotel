@@ -3,7 +3,7 @@ package edu.coursework.hotel.service.booking.interfaces;
 /*
     @author:    Natalie
     @project:    Hotel
-    @class:    IServicesService
+    @class:    IBookingService
     @version:    1.0.0 
     @since:    14.04.2021     
 */

@@ -3,7 +3,7 @@ package edu.coursework.hotel.dao.feedback.interfaces;
 /*
     @author:    Natalie
     @project:    Hotel
-    @interface:    IServicesDAO
+    @interface:    IFeedbackDAO
     @version:    1.0.0 
     @since:    14.04.2021     
 */

@@ -1,5 +1,13 @@
 package edu.coursework.hotel;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    HotelApplication
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

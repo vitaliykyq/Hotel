@@ -1,5 +1,13 @@
 package edu.coursework.hotel.service.client.impls;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    ClientServiceImpl
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import edu.coursework.hotel.model.Client;
 import edu.coursework.hotel.model.Person;
 import edu.coursework.hotel.repository.ClientRepository;

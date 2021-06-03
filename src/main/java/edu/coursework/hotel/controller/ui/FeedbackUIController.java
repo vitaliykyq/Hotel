@@ -1,7 +1,7 @@
 package edu.coursework.hotel.controller.ui;
 
 /*
-    @author:    Julia
+    @author:    Natalie
     @project:    Hotel
     @class:    FeedbackUIController
     @version:    1.0.0 
@@ -32,8 +32,8 @@ public class FeedbackUIController {
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
-        List<Feedback> feedback = feedbackService.getAll();
-        model.addAttribute("feedbackList", feedback);
+        List<Feedback> feedbackList = feedbackService.getAll();
+        model.addAttribute("feedbackList", feedbackList);
 
         return "feedback/feedbackList";
     }
@@ -49,7 +49,7 @@ public class FeedbackUIController {
     }
 
     @PostMapping("/update")
-    public String update(Model model, @ModelAttribute("employee") @RequestBody Feedback feedback) {
+    public String update(Model model, @ModelAttribute("feedback") @RequestBody Feedback feedback) {
 
         feedbackService.update(feedback);
         return "redirect:/ui/feedback/get/all";
@@ -66,7 +66,7 @@ public class FeedbackUIController {
     }
 
     @PostMapping("/add")
-    public String add(Model model, @ModelAttribute("employee") @RequestBody Feedback feedback) {
+    public String add(Model model, @ModelAttribute("feedback") @RequestBody Feedback feedback) {
 
             feedback.setPerson(personService.getById(feedback.getPerson().getId()));
             model.addAttribute("feedback", feedbackService.create(feedback));

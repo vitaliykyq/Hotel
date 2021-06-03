@@ -1,5 +1,13 @@
 package edu.coursework.hotel.service.floor.impls;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    FloorServiceImpl
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import edu.coursework.hotel.model.Floor;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.FloorRepository;
@@ -9,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+
 @Service
 public class FloorServiceImpl implements IFloorService {
     @Autowired

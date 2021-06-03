@@ -1,5 +1,13 @@
 package edu.coursework.hotel.service.room.impls;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    RoomServiceImpl
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import edu.coursework.hotel.model.Room;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.RoomRepository;

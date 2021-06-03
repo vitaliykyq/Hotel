@@ -1,5 +1,13 @@
 package edu.coursework.hotel.configuration;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    MongoDBConfiguration
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import org.springframework.context.annotation.Bean;

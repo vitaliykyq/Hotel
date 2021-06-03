@@ -1,5 +1,13 @@
 package edu.coursework.hotel.service.booking.impls;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    BookingServiceImpl
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import edu.coursework.hotel.model.Booking;
 import edu.coursework.hotel.model.Client;
 import edu.coursework.hotel.model.Person;

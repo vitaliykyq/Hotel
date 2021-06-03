@@ -1,5 +1,13 @@
 package edu.coursework.hotel.service.services.impls;
 
+/*
+    @author:    Natalie
+    @project:    Hotel
+    @class:    ServicesServiceImpl
+    @version:    1.0.0
+    @since:    26.04.2021
+*/
+
 import edu.coursework.hotel.model.Services;
 import edu.coursework.hotel.repository.ClientRepository;
 import edu.coursework.hotel.repository.ServicesRepository;
@@ -9,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+
 @Service
 public class ServicesServiceImpl implements IServicesService {
 

@@ -3,7 +3,7 @@ package edu.coursework.hotel.dao.person.interfaces;
 /*
     @author:    Natalie
     @project:    Hotel
-    @interface:    IServicesDAO
+    @interface:    IPersonDAO
     @version:    1.0.0 
     @since:    14.04.2021     
 */
