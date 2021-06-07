@@ -59,6 +59,7 @@ public class OrganizationServiceImpl implements IOrganizationService {
     public List<Organization> getAll() {
         return repository.findAll();
     }
+
     public Object getNumOfOrganizations() {
 
         Aggregation aggregation = Aggregation.newAggregation(

@@ -59,11 +59,11 @@ public class RoomRestController {
     public  Object getFreeRoomsByCapacity(@PathVariable("capacity") int capacity){
         return service.getFreeRoomsByCapacity(capacity);
     }
-    @GetMapping ("/get/getFreeRoomsByPriceIn/{min}/{max}")
+    @GetMapping ("/get/freeRoomsByPriceIn/{min}/{max}")
     public  Object getFreeRoomsByPriceIn(@PathVariable("min") int minPrice, @PathVariable("max") int maxPrice){
         return service.getFreeRoomsByPriceIn(minPrice, maxPrice);
     }
-    @GetMapping ("/get/getFreeRoomByNumber/{number}")
+    @GetMapping ("/get/freeRoomByNumber/{number}")
     public  Object getFreeRoomByNumber(@PathVariable("number") int number){
         return service.getFreeRoomByNumber(number);
     }

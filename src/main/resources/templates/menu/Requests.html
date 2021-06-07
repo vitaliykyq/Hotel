@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="content" style="position: absolute; left: 50%; transform: translate(-50%, 0)">
+    <h1 class="menu-text">Requests</h1>
+    <table class="main__menu">
+        <tbody class="menu">
+
+        <tr>
+            <td>
+                <a th:href="@{/api/room/get/freeRooms}">freeRooms</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/api/roomt/get/freeRoomsByCapacity/{capacity}}">freeRoomsByCapacity</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/api/room/get/freeRoomsByPriceIn/{min}/{max}}">freeRoomsByPriceIn</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/api/room/get/freeRoomByNumber/{number}}">freeRoomByNumber</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/api/organization/get/numOfOrganizations}">numOfOrganizations</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/api/organization/get/allByAmountGreaterThanEqual/{amount}}">allByAmountGreaterThanEqual</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/api/feedback/get/badFeedbacks}">badFeedbacks</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/api/booking/get/roomWithDateOfEviction/{eviction}}">roomWithDateOfEviction</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/menu}">BACK TO MENU</a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

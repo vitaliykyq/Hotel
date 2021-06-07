@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -6,71 +7,71 @@
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-    <div class="content" style="position: absolute; left: 50%; transform: translate(-50%, 0)">
-        <h1 class="menu-text">Menu</h1>
-        <table class="main__menu">
-            <tbody class="menu">
-            <tr>
-                <td>
-                    <a data-text="Requests"
-                       th:href = "@{/ui/menu}"
-                       onclick="window.location.href = this.getAttribute('href')">
-                        Requests
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/booking/get/all}">Booking</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/client/get/all}">Client</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/corps/get/all}">Corps</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/entertainment/get/all}">Entertainment</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/feedback/get/all}">Feedback</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/floor/get/all}">Floor</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/organization/get/all}">Organization</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/person/get/all}">Person</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/room/get/all}">Room</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a th:href="@{/ui/services/get/all}">Services</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="content" style="position: absolute; left: 50%; transform: translate(-50%, 0)">
+    <h1 class="menu-text">Menu</h1>
+    <table class="main__menu">
+        <tbody class="menu">
+        <tr>
+            <td>
+                <a data-text="Requests"
+                   th:href = "@{/ui/menu/requests}"
+                   onclick="window.location.href = this.getAttribute('href')">
+                    Requests
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/booking/get/all}">Booking</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/client/get/all}">Client</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/corps/get/all}">Corps</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/entertainment/get/all}">Entertainment</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/feedback/get/all}">Feedback</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/floor/get/all}">Floor</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/organization/get/all}">Organization</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/person/get/all}">Person</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/room/get/all}">Room</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a th:href="@{/ui/services/get/all}">Services</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
