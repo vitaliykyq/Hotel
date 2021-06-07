@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Client</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>ADD CLIENT</h1>
+        </div>
+        <form action="#" th:action="@{/ui/client/add}" th:object="${client}"
+              method="POST">
+
+            <table>
+                <tr>
+                    <td><label for="num1">Person</label></td>
+                    <td>
+                        <div id="num1">
+                            <select id="id" th:field="*{person}">
+                                <option th:each="personListId: ${personListId}"
+                                        th:value="${personListId.id}" th:text="${personListId.name}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Bookings</label></td>
+                    <td>
+                        <div id="num2">
+                            <select multiple id="id1" th:field="*{bookings}">
+                                <option th:each="bookingListId: ${bookingListId}"
+                                        th:value="${bookingListId.id}" th:text="${bookingListId.price}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">SAVE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/client/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>

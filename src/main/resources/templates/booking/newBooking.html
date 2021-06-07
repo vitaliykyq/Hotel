@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Booking</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>ADD BOOKING</h1>
+        </div>
+        <form action="#" th:action="@{/ui/booking/add}" th:object="${booking}"
+              method="POST">
+
+            <table>
+                <tr>
+                    <td><label for="num1">Client</label></td>
+                    <td><input id="num1" th:field="*{client}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Room</label></td>
+                    <td><input id="num2" th:field="*{room}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num3">Entertainments</label></td>
+                    <td>
+                        <div id="num3">
+                            <select multiple id="id" th:field="*{entertainments}">
+                                <option th:each="entertainmentListId: ${entertainmentListId}"
+                                        th:value="${entertainmentListId.id}" th:text="${entertainmentListId.type}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="num4">Services</label></td>
+                    <td>
+                        <div id="num4">
+                            <select multiple id="id1" th:field="*{services}">
+                                <option th:each="servicesListId: ${servicesListId}"
+                                        th:value="${servicesListId.id}" th:text="${servicesListId.type}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="num5">Settlement</label></td>
+                    <td><input id="num5" th:field="*{settlement}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num6">Eviction</label></td>
+                    <td><input id="num6" th:field="*{eviction}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num7">Price</label></td>
+                    <td><input id="num7" th:field="*{price}"  required></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">SAVE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/feedback/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>

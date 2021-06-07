@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Room</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>ADD ROOM</h1>
+        </div>
+        <form action="#" th:action="@{/ui/room/add}" th:object="${room}"
+              method="POST">
+
+            <table>
+                <tr>
+                    <td><label for="num1">Number</label></td>
+                    <td><input id="num1" th:field="*{number}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Capacity</label></td>
+                    <td><input id="num2" th:field="*{capacity}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num3">Price</label></td>
+                    <td><input id="num3" th:field="*{price}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num4">IsFree</label></td>
+                    <td><select id="num4" th:field="*{isFree}"  required>
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="num5">Rating</label></td>
+                    <td><input id="num5" th:field="*{rating}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num6">Type</label></td>
+                    <td><input id="num6" th:field="*{type}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num7">Entertainments</label></td>
+                    <td>
+                        <div id="num7">
+                            <select multiple id="id" th:field="*{entertainments}">
+                                <option th:each="entertainmentListId: ${entertainmentListId}"
+                                        th:value="${entertainmentListId.id}" th:text="${entertainmentListId.type}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="num8">Services</label></td>
+                    <td>
+                        <div id="num8">
+                            <select multiple id="id1" th:field="*{services}">
+                                <option th:each="servicesListId: ${servicesListId}"
+                                        th:value="${servicesListId.id}" th:text="${servicesListId.type}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">SAVE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/room/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>

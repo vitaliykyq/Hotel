@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Organization</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>ADD ORGANIZATION</h1>
+        </div>
+        <form action="#" th:action="@{/ui/organization/add}" th:object="${organization}"
+              method="POST">
+
+            <table>
+                <tr>
+                    <td><label for="num1">Name</label></td>
+                    <td><input id="num1" th:field="*{name}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Start</label></td>
+                    <td><input id="num2" th:field="*{start}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num3">Finish</label></td>
+                    <td><input id="num3" th:field="*{finish}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num4">Amount</label></td>
+                    <td><input id="num4" th:field="*{amount}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num5">Persons</label></td>
+                    <td>
+                        <div id="num5">
+                            <select multiple id="id" th:field="*{persons}">
+                                <option th:each="personIdList: ${personListId}"
+                                        th:value="${personIdList.id}" th:text="${personIdList.name}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="num6">Bookings</label></td>
+                    <td>
+                        <div id="num6">
+                            <select multiple id="id1" th:field="*{bookings}">
+                                <option th:each="bookingListId: ${bookingListId}"
+                                        th:value="${bookingListId.id}" th:text="${bookingListId.price}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">SAVE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/organization/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>

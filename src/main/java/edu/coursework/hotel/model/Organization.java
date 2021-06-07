@@ -27,11 +27,11 @@ public class Organization {
     private String id;
 
     private String name;
-    private Date start;
-    private Date finish;
+    private String start;
+    private String finish;
     private int amount;
     private ArrayList<Person> persons;
-    private ArrayList<Booking> Booking;
+    private ArrayList<Booking> bookings;
 
     private Date created_at;
     private Date modified_at;

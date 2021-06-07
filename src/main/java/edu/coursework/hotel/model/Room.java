@@ -23,8 +23,9 @@ import java.util.Date;
 @AllArgsConstructor
 @Document(collection = "room")
 public class Room {
-@Id
+    @Id
     private String id;
+
     private int number;
     private int capacity;
     private int price;

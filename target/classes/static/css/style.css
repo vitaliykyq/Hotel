@@ -187,3 +187,24 @@ table.control .buttonControl .ButtonEdit{
     color:#ad5cad;
     background: #f9ecff;
 }
+
+.menu-text {
+    color: white;
+    text-align: center;
+}
+
+.menu tr td {
+    text-align: center;
+}
+
+.menu tr td a {
+    color: white;
+    text-decoration: none;
+}
+
+.menuBtn {
+    display: block;
+    width: 150px;
+    height: 50px;
+    color: #00c256;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Corps</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>UPDATE CORPS</h1>
+        </div>
+        <form id="dataMain" action="#" th:action="@{/ui/corps/update}" th:object="${corps}"
+              method="POST">
+
+            <table>
+                <tr>
+                    <td><label for="num0">Id</label></td>
+                    <td><input id="num0" readonly th:field="*{id}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="num1">Address</label></td>
+                    <td><input id="num1" th:field="*{address}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">ClassHotel</label></td>
+                    <td><input id="num2" th:field="*{classHotel}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num3">Floors</label></td>
+                    <td>
+                        <div id="num3">
+                            <select multiple id="id" th:field="*{floors}">
+                                <option th:each="floorListId: ${floorListId}"
+                                        th:value="${floorListId.id}" th:text="${floorListId.numberFloor}">
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <button form="dataMain" type="submit">DONE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/corps/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>

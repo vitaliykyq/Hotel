@@ -27,7 +27,7 @@ public class Client {
     private String id;
 
     private Person person;
-    private ArrayList<Booking> booking;
+    private ArrayList<Booking> bookings;
 
     private Date created_at;
     private Date modified_at;

@@ -9,6 +9,7 @@ package edu.coursework.hotel.controller.ui;
 */
 
 import edu.coursework.hotel.model.*;
+import edu.coursework.hotel.service.booking.impls.BookingServiceImpl;
 import edu.coursework.hotel.service.client.impls.ClientServiceImpl;
 import edu.coursework.hotel.service.person.impls.PersonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,9 @@ public class ClientUIController {
     @Autowired
     PersonServiceImpl personService;
 
+    @Autowired
+    BookingServiceImpl bookingService;
+
     @RequestMapping("/get/all")
     public String showAll(Model model){
 
@@ -44,6 +48,9 @@ public class ClientUIController {
 
         List<Person> personListId = personService.getAll();
         model.addAttribute("personListId", personListId);
+
+        List<Booking> bookingListId = bookingService.getAll();
+        model.addAttribute("bookingListId", bookingListId);
         return "client/updateClient";
     }
 
@@ -61,6 +68,9 @@ public class ClientUIController {
 
         List<Person> personListId = personService.getAll();
         model.addAttribute("personListId", personListId);
+
+        List<Booking> bookingListId = bookingService.getAll();
+        model.addAttribute("bookingListId", bookingListId);
         return "client/newClient";
     }
 

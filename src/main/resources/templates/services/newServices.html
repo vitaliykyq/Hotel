@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Services</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="elementPages">
+        <div>
+            <h1>ADD SERVICES</h1>
+        </div>
+        <form action="#" th:action="@{/ui/services/add}" th:object="${services}"
+              method="POST">
+
+            <table>
+                <tr>
+                    <td><label for="num1">Type</label></td>
+                    <td><input id="num1" th:field="*{type}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Price</label></td>
+                    <td><input id="num2" th:field="*{price}"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="num3">Cost</label></td>
+                    <td><input id="num3" th:field="*{cost}"  required></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">SAVE</button>
+        </form>
+    </div>
+
+    <a th:href="@{/ui/services/get/all}">
+        <button class="ButtonAdd">Back</button>
+    </a>
+</body>
+</html>
