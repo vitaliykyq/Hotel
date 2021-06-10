@@ -15,12 +15,25 @@
 
             <table>
                 <tr>
-                    <td><label for="num1">Client</label></td>
-                    <td><input id="num1" th:field="*{client}"  required></td>
+                    <td><label>Client</label></td>
+                    <td>
+                        <select id="id2" th:field="*{client}">
+                            <option th:each="elementListId: ${clientListId}"
+                                    th:value="${elementListId.id}" th:text="${elementListId.person.name}">
+                            </option>
+                        </select>
+                    </td>
+
                 </tr>
                 <tr>
-                    <td><label for="num2">Room</label></td>
-                    <td><input id="num2" th:field="*{room}"  required></td>
+                    <td><label>Room</label></td>
+                    <td>
+                        <select id="id3" th:field="*{room}">
+                            <option th:each="elementListId: ${roomListId}"
+                                    th:value="${elementListId.id}" th:text="${elementListId.number}">
+                            </option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="num3">Entertainments</label></td>

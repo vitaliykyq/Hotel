@@ -29,7 +29,7 @@ public class Room {
     private int number;
     private int capacity;
     private int price;
-    private boolean isFree;
+    private Boolean isFree;
     //Вид номеру
     private int rating;
     private String type;
