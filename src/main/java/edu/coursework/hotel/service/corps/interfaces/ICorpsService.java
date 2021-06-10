@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.corps.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    ICorpsService
     @version:    1.0.0 

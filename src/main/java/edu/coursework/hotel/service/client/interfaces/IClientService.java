@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.client.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    IClientService
     @version:    1.0.0 

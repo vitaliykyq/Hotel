@@ -3,22 +3,22 @@ body{
     height: 100%;
     padding: 1%;
     background-size: 100%;
-    background: url("../image/backgroundPage.jpeg") fixed;
+    background: url("https://www.palace.it/images/homepage/palace-merano/01-hotel-palace-merano-health-for-life.jpg") fixed;
 }
 
 table.control{
     border: 1px solid #ac8fb5;
     border-collapse: collapse;
     width: 96%;
-    background: white;
+    background: #f1feffe0;
 }
 
 table.control .title{
-    background: #e8b3f7;
+    background: white;
 }
 
 table.control th, table.control td{
-    border: 1px solid #ac8fb5;
+    border: 3px solid #b8b8b8;
     padding: 20px;
 }
 
@@ -50,24 +50,24 @@ table.control .dropItem a:first-child{
 }
 
 .ButtonAdd{
-    border: 1px solid #d885ef;
-    background: #f090ff;
+    border: 1px solid #96859b;
+    background: #ffde82;
     padding: 20px;
     width: 200px;
-    border-radius: 40px 10px 40px 5px;
-    box-shadow: 10px 5px 5px #b793bd;
+    box-shadow: inset 0px 0px 20px 0px #ae8622;
     cursor: pointer;
     transition: .3s;
     font-size: 20px;
     font-family: Monaco, serif;
-    color:#8f5598;
+    color: #a89152;
 }
 
 .ButtonAdd:hover{
-    color:white;
-    background: #e58af3;
+    color: white;
+    background: #ffbc00;
     box-shadow: none;
     transition: .3s;
+    box-shadow: inset 0 0 20px #684d00;
 }
 
 table.control .invisible{
@@ -109,33 +109,35 @@ table.control .buttonControl a{
 table.control .buttonControl .ButtonDelete,
 table.control .buttonControl .ButtonEdit{
     font-size: 20px;
-    cursor:pointer;
-    border: 2px solid #b687c5;
+    cursor: pointer;
+    border: 2px solid #000000;
     padding: 5px;
     width: 40px;
     height: 40px;
-    background: #f3d1fd;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: inset black 0 0 8px;
 }
 
 table.control .buttonControl .ButtonDelete{
-    color: #7c3b9e;
+    color: #ff0000;
     transition: .3s;
 }
 
 table.control .buttonControl .ButtonDelete:hover{
-    color: #d900ff;
     transition: .3s;
-    border: 2px solid #f3d1fd;
+    border: 2px solid #ffffff;
+    box-shadow: none;
 }
 
 table.control .buttonControl .ButtonEdit:hover{
-    color: #12b9b2;
     transition: .3s;
-    border: 2px solid #f3d1fd;
+    border: 2px solid #ffffff;
+    box-shadow: none;
 }
 
 table.control .buttonControl .ButtonEdit{
-    color: #0f9c0f;
+    color: #0cae20;
     font-weight: bold;
     transition: .3s;
 }
@@ -145,10 +147,19 @@ table.control .buttonControl .ButtonEdit{
     text-align: center;
 }
 
+.elementPages h1{
+    color: wheat;
+}
+
 .elementPages table,
 .elementPages tr,
 .elementPages td{
     margin:auto;
+}
+
+.elementPages form > table{
+    background: linear-gradient(45deg, rgb(245, 222, 179), rgb(175, 209, 247));
+    border-radius: 20px;
 }
 
 .elementPages td{
@@ -171,40 +182,28 @@ table.control .buttonControl .ButtonEdit{
 }
 
 .elementPages button[type="submit"]{
-    padding: 10px 15px 10px 15px;
-    font-size: 20px;
+    padding: 15px 50px 15px 50px;
+    font-size: 25px;
     font-family: "Bodoni 72 Smallcaps", monospace;
     cursor: pointer;
-    background: #eac9f800;
+    background: #ffde82;
     border-radius: 10px;
     transition: .2s;
-    color:#ea93ea;
+    color: #4b3f1c;
 }
 
 .elementPages button[type="submit"]:hover{
     border-radius: 15px 0 15px 0;
     transition: .2s;
-    color:#ad5cad;
-    background: #f9ecff;
+    color: #725400;
+    box-shadow: inset white 0 0 20px;
+    background: #ffbc00;
 }
 
-.menu-text {
-    color: white;
-    text-align: center;
+a.nav-link{
+    color:white !important;
 }
 
-.menu tr td {
-    text-align: center;
-}
-
-.menu tr td a {
-    color: white;
-    text-decoration: none;
-}
-
-.menuBtn {
-    display: block;
-    width: 150px;
-    height: 50px;
-    color: #00c256;
+a.active{
+    color:black !important;
 }

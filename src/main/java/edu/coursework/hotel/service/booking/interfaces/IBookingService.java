@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.booking.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    IBookingService
     @version:    1.0.0 

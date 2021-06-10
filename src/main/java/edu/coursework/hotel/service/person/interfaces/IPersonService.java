@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.person.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    IPersonService
     @version:    1.0.0 

@@ -3,7 +3,7 @@ package edu.coursework.hotel.dao.person.impls;
 
 */
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    PersonDAOImpl
     @version:    1.0.0 

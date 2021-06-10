@@ -5,73 +5,30 @@
     <meta charset="UTF-8">
     <title>Menu</title>
     <link th:href="@{/css/style.css}" rel="stylesheet">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
 <body>
-<div class="content" style="position: absolute; left: 50%; transform: translate(-50%, 0)">
-    <h1 class="menu-text">Menu</h1>
-    <table class="main__menu">
-        <tbody class="menu">
-        <tr>
-            <td>
-                <a data-text="Requests"
-                   th:href = "@{/ui/menu/requests}"
-                   onclick="window.location.href = this.getAttribute('href')">
-                    Requests
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/booking/get/all}">Booking</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/client/get/all}">Client</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/corps/get/all}">Corps</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/entertainment/get/all}">Entertainment</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/feedback/get/all}">Feedback</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/floor/get/all}">Floor</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/organization/get/all}">Organization</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/person/get/all}">Person</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/room/get/all}">Room</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a th:href="@{/ui/services/get/all}">Services</a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Menu</a>
+    </li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/booking/get/all}">Booking</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/client/get/all}">Client</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/corps/get/all}">Corps</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/entertainment/get/all}">Entertainment</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/feedback/get/all}">Feedback</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/floor/get/all}">Floor</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/organization/get/all}">Organization</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/person/get/all}">Person</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/room/get/all}">Room</a></li>
+    <li class="nav-item"><a class="nav-link" th:href="@{/ui/services/get/all}">Services</a></li>
+    <li class="nav-item"><a class="nav-link" th:href = "@{/swagger-ui.html}">Requests</a></li>
+</ul>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
 </html>

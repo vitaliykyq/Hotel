@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.organization.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    IOrganizationService
     @version:    1.0.0 

@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.room.impls;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    RoomServiceImpl
     @version:    1.0.0

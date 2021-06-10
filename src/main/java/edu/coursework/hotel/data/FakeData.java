@@ -3,7 +3,7 @@ package edu.coursework.hotel.data;
 
 */
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    FakeData
     @version:    1.0.0

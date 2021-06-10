@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.booking.impls;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    BookingServiceImpl
     @version:    1.0.0

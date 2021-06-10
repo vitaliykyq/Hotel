@@ -1,7 +1,7 @@
 package edu.coursework.hotel;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    HotelApplication
     @version:    1.0.0

@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.entertainment.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    IEntertainmentService
     @version:    1.0.0 

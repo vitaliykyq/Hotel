@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.room.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    IRoomService
     @version:    1.0.0 

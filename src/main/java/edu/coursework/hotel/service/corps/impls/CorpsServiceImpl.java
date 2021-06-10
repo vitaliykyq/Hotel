@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.corps.impls;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    CorpsServiceImpl
     @version:    1.0.0

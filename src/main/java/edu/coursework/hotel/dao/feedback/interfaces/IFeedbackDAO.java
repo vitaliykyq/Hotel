@@ -1,7 +1,7 @@
 package edu.coursework.hotel.dao.feedback.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @interface:    IFeedbackDAO
     @version:    1.0.0 

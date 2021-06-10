@@ -1,7 +1,7 @@
 package edu.coursework.hotel.repository;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    FeedbackRepository
     @version:    1.0.0

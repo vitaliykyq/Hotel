@@ -1,7 +1,7 @@
 /*package edu.coursework.hotel.dao.feedback.impls;
 
 *//*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    FeedbackDAOImpl
     @version:    1.0.0 

@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.feedback.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    IFeedbackService
     @version:    1.0.0 

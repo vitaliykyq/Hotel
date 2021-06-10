@@ -1,7 +1,7 @@
 package edu.coursework.hotel.service.feedback.impls;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    FeedbackServiceImpl
     @version:    1.0.0

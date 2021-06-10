@@ -1,7 +1,7 @@
 package edu.coursework.hotel.dao.person.interfaces;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @interface:    IPersonDAO
     @version:    1.0.0 

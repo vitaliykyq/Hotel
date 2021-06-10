@@ -1,7 +1,7 @@
 package edu.coursework.hotel.controller.ui;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    EntertainmentUIController
     @version:    1.0.0 

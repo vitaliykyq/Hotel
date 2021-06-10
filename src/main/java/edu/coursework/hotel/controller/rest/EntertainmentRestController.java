@@ -1,7 +1,7 @@
 package edu.coursework.hotel.controller.rest;
 
 /*
-    @author:    Natalie
+    @author:    Slava
     @project:    Hotel
     @class:    EntertainmentRestController
     @version:    1.0.0 
